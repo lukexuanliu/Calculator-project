@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #fff 100%);
+  font-family: 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 30px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+  padding: 24px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 2.2em;
+  text-align: right;
+  border: none;
+  border-radius: 18px;
+  background: rgba(240, 240, 240, 0.9);
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  padding: 0 18px;
+  color: #222;
+  font-weight: 500;
+  letter-spacing: 1px;
+  overflow-x: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  direction: ltr;
+  transition: font-size 0.2s;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+/* Responsive font-size for long numbers */
+@media (max-width: 400px) {
+  #display {
+    font-size: 1.3em;
+  }
+}
+
+/* Shrink font-size for very long numbers */
+#display.shrink {
+  font-size: 1.2em;
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 64px);
+  gap: 16px;
+}
+
+button {
+  font-size: 1.5em;
+  padding: 18px 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  font-weight: 500;
+  outline: none;
+}
+
+button:active {
+  background: #e0e7ff;
+  box-shadow: 0 1px 4px 0 rgba(31, 38, 135, 0.12);
+}
+
+/* Operator buttons */
+button:nth-child(4),
+button:nth-child(8),
+button:nth-child(12),
+button:nth-child(16) {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e42 100%);
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(251,191,36,0.18);
+}
+button:nth-child(16) { /* + */
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+}
+button:nth-child(15) { /* = */
+  background: linear-gradient(135deg, #10b981 0%, #22d3ee 100%);
+  color: #fff;
+  font-weight: 600;
+}
+button:nth-child(14) { /* C */
+  background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
+  color: #fff;
+  font-weight: 600;
+}
+
+button:hover {
+  filter: brightness(0.97);
+}
+
