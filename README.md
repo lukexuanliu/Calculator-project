@@ -2,6 +2,10 @@
 
 A modern, responsive calculator built with HTML, CSS, and JavaScript.
 
+## Development Notes
+
+This project was developed using Windsurf, an AI-powered coding assistant. It was my first time using the GitHub CLI (`gh`) for repository management, making this project a great learning experience in modern development tools.
+
 ## Features
 
 - Basic arithmetic operations (+, -, *, /)
