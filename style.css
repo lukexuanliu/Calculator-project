@@ -24,6 +24,64 @@ body {
   padding: 24px;
 }
 
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.mode-toggle span {
+  margin-left: 10px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
 #display {
   width: 100%;
   height: 60px;
@@ -55,20 +113,33 @@ body {
 
 /* Shrink font-size for very long numbers */
 #display.shrink {
-  font-size: 1.2em;
+  font-size: 16px;
 }
-
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 64px);
-  gap: 16px;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+.basic-buttons {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sci-buttons {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 button {
-  font-size: 1.5em;
-  padding: 18px 0;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
   border-radius: 50%;
   background: rgba(255,255,255,0.85);
   box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);

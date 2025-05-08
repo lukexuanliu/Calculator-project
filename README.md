@@ -16,6 +16,10 @@ This project was developed using Windsurf, an AI-powered coding assistant. It wa
 
 ## Getting Started
 
+This is a simple web-based calculator that doesn't require any Python virtual environment (venv) or server setup. You can run it directly by opening the `index.html` file in your web browser.
+
+Alternatively, you can start a local server to run the project:
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/lukexuanliu/Calculator-project.git

@@ -7,12 +7,26 @@
 </head>
 <body>
   <div class="calculator">
+    <div class="mode-toggle">
+      <label class="switch">
+        <input type="checkbox" id="sciMode">
+        <span class="slider"></span>
+      </label>
+      <span>Scientific Mode</span>
+    </div>
     <input type="text" id="display" disabled>
     <div class="buttons">
-      <button>7</button><button>8</button><button>9</button><button>/</button>
-      <button>4</button><button>5</button><button>6</button><button>*</button>
-      <button>1</button><button>2</button><button>3</button><button>-</button>
-      <button>0</button><button>C</button><button>=</button><button>+</button>
+      <div class="basic-buttons">
+        <button>7</button><button>8</button><button>9</button><button>/</button>
+        <button>4</button><button>5</button><button>6</button><button>*</button>
+        <button>1</button><button>2</button><button>3</button><button>-</button>
+        <button>0</button><button>C</button><button>=</button><button>+</button>
+      </div>
+      <div class="sci-buttons" style="display: none;">
+        <button>sin</button><button>cos</button><button>tan</button><button>π</button>
+        <button>√</button><button>x²</button><button>log</button><button>ln</button>
+        <button>!</button><button>e</button><button>Ans</button><button>DEL</button>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
